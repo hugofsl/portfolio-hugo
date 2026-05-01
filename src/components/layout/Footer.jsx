@@ -1,5 +1,5 @@
 // src/components/layout/Footer.jsx
-import { GitBranch, Briefcase, Palette, TerminalSquare } from 'lucide-react';
+import { Github, Instagram, Palette } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -15,14 +15,14 @@ export default function Footer() {
 
         {/* Links Sociais / Portfolio */}
         <div className="flex items-center gap-6">
-          <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors" title="Repositórios de Código">
-            <GitBranch size={20} />
-          </a>
-          <a href="#" className="text-slate-400 hover:text-blue-400 transition-colors" title="Perfil Profissional">
-            <Briefcase size={20} />
+          <a href="https://github.com/hugofsl" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors" title="GitHub">
+            <Github size={20} />
           </a>
           <a href="https://behance.net/hugolou" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors" title="Behance (Design Portfolio)">
             <Palette size={20} />
+          </a>
+          <a href="https://www.instagram.com/hugofslourenco/" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-blue-400 transition-colors" title="Instagram">
+            <Instagram size={20} />
           </a>
         </div>
 
@@ -35,7 +35,7 @@ export default function Footer() {
             </span>
             Sistemas Operacionais
           </div>
-          <p>© {new Date().getFullYear()} Desenvolvido com React & Vite.</p>
+          <p>©Hugo Lourenço 2026 | Desenvolvido com React & Vite</p>
         </div>
 
       </div>

@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Aproveito para já colocar uma cor de fundo escura como base para o tema "Tech" */
+body {
+  @apply bg-slate-950 text-slate-50 antialiased;
+}

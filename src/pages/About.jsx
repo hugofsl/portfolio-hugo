@@ -1,14 +1,13 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring, useMotionValue, useMotionTemplate } from 'framer-motion';
-import { 
-  Cpu, Palette, Database, Gamepad2, GraduationCap, Boxes, Lightbulb, Zap, Rocket
-} from 'lucide-react';
+import { Cpu, Palette, Database, Gamepad2, GraduationCap, Boxes, Lightbulb, Zap, Rocket } from 'lucide-react';
 import SEO from '../components/SEO';
-// Importando a foto local (Ajuste o nome do arquivo se a extensão for .jpg ou .jpeg)
 import fotoHugo from '../assets/foto-hugo.png';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
   const containerRef = useRef(null);
+  const { t } = useTranslation();
   
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -20,7 +19,6 @@ export default function About() {
   const y2 = useTransform(smoothProgress, [0, 1], [0, -500]);
   const rotate = useTransform(smoothProgress, [0, 1], [0, 45]);
 
-  // Mouse global do fundo
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const handleGlobalMouseMove = ({ currentTarget, clientX, clientY }) => {
@@ -29,7 +27,6 @@ export default function About() {
     mouseY.set(clientY - top);
   };
 
-  // Mouse local para o Texto "Fluxos Digitais"
   const textMouseX = useMotionValue(0);
   const textMouseY = useMotionValue(0);
   const handleTextMouseMove = (e) => {
@@ -39,9 +36,9 @@ export default function About() {
   };
 
   const skills = [
-    { category: "Engenharia & Dev", icon: <Cpu size={32} />, items: ["React & Vite", "Firebase", "Python", "SQL", "C++/C#", "GitHub Actions"], color: "text-blue-400", border: "border-blue-500/20" },
-    { category: "Design & UX", icon: <Palette size={32} />, items: ["Adobe Illustrator", "Photoshop", "After Effects", "Direção de Arte", "Rebranding"], color: "text-pink-400", border: "border-pink-500/20" },
-    { category: "Estratégia & Dados", icon: <Database size={32} />, items: ["Ciência de Dados", "BI (Looker Studio)", "Gestão Ágil (SCRUM)", "Planejamento"], color: "text-emerald-400", border: "border-emerald-500/20" }
+    { category: t('about.skills_cards.eng'), icon: <Cpu size={32} />, items: ["React & Vite", "Firebase", "Python", "SQL", "C++/C#", "GitHub Actions"], color: "text-blue-400", border: "border-blue-500/20" },
+    { category: t('about.skills_cards.design'), icon: <Palette size={32} />, items: ["Adobe Illustrator", "Photoshop", "After Effects", t('about.skills_cards.items.art_direction'), "Rebranding"], color: "text-pink-400", border: "border-pink-500/20" },
+    { category: t('about.skills_cards.strategy'), icon: <Database size={32} />, items: [t('about.skills_cards.items.data_science'), "BI (Looker Studio)", t('about.skills_cards.items.agile'), t('about.skills_cards.items.planning')], color: "text-emerald-400", border: "border-emerald-500/20" }
   ];
 
   return (
@@ -51,11 +48,10 @@ export default function About() {
       onMouseMove={handleGlobalMouseMove} 
     >
       <SEO 
-        title="Sobre" 
-        description="Estrategista criativo com raízes na engenharia. Transformo dados em inteligência e design em experiências memoráveis."
+        title={t('navbar.about')} 
+        description={t('about.subtitle')}
         url="/about"
       />
-      {/* Luz global do fundo */}
       <motion.div
         className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-300 z-30"
         style={{
@@ -70,9 +66,7 @@ export default function About() {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        
         <section className="min-h-screen flex flex-col lg:flex-row items-center justify-center gap-16 pt-20">
-          
           <TiltContainer>
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
@@ -83,7 +77,6 @@ export default function About() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-blue-500 via-purple-500 to-pink-500 rounded-[2rem] blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
               <div className="relative w-full h-full bg-slate-900 rounded-[2rem] overflow-hidden border border-slate-800 p-2">
                 <div className="w-full h-full rounded-[1.5rem] overflow-hidden bg-slate-800">
-                  {/* FOTO LOCAL CARREGADA AQUI */}
                   <img src={fotoHugo} alt="Hugo Lourenço" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                 </div>
               </div>
@@ -98,29 +91,27 @@ export default function About() {
 
           <div className="flex-1 text-center lg:text-left z-40">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono mb-6">
-              <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span> PROTOCOLO DE IDENTIDADE ATIVO
+              <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span> {t('about.protocol')}
             </motion.div>
             
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="text-5xl md:text-8xl font-black tracking-tighter leading-none mb-8">
-              Arquiteto de <br />
-              {/* REMOVIDO OVERFLOW-HIDDEN PARA NÃO CORTAR AS LETRAS */}
+              {t('about.title_architect')} <br />
               <span 
                 className="relative inline-block group/text cursor-default leading-tight"
                 onMouseMove={handleTextMouseMove}
               >
-                <span className="block text-transparent" style={{ WebkitTextStroke: '2px #475569' }}>Fluxos Digitais.</span>
-                {/* REMOVIDO ITALIC DO GRADIENTE PARA FICAR IGUAL A BASE */}
+                <span className="block text-transparent" style={{ WebkitTextStroke: '2px #475569' }}>{t('about.title_workflows')}</span>
                 <motion.span 
                   className="absolute inset-0 block bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent opacity-0 group-hover/text:opacity-100 transition-opacity duration-300 pointer-events-none"
                   style={{ clipPath: useMotionTemplate`circle(100px at ${textMouseX}px ${textMouseY}px)` }}
                 >
-                  Fluxos Digitais.
+                  {t('about.title_workflows')}
                 </motion.span>
               </span>
             </motion.h1>
             
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }} className="text-xl text-slate-400 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
-              Estrategista criativo com raízes na engenharia. Transformo dados em inteligência e design em experiências memoráveis.
+              {t('about.subtitle')}
             </motion.p>
           </div>
         </section>
@@ -137,14 +128,18 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
-                A precisão da <span className="text-blue-500 relative group">lógica<span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-300 rounded-full"></span></span> <br /> 
-                com o fôlego da <span className="text-pink-500 relative group">arte.<span className="absolute bottom-0 left-0 w-0 h-1 bg-pink-500 group-hover:w-full transition-all duration-300 rounded-full"></span></span>
+                {t('about.philosophy.precision')} <span className="text-blue-500 relative group">{t('about.philosophy.logic')}<span className="absolute bottom-0 left-0 w-0 h-1 bg-blue-500 group-hover:w-full transition-all duration-300 rounded-full"></span></span> <br /> 
+                {t('about.philosophy.breath')} <span className="text-pink-500 relative group">{t('about.philosophy.art')}<span className="absolute bottom-0 left-0 w-0 h-1 bg-pink-500 group-hover:w-full transition-all duration-300 rounded-full"></span></span>
               </h2>
               <p className="text-slate-400 text-lg mb-8 leading-relaxed">
-                Minha formação multidisciplinar permite que eu transite entre o desenvolvimento de baixo nível e a alta gestão de design com facilidade. Não apenas escrevo código; eu projeto sistemas resilientes.
+                {t('about.philosophy.description')}
               </p>
               <div className="flex flex-col gap-6">
-                {[{ label: "Mecatrônica", value: "Raciocínio Sistêmico", icon: <Boxes size={20} /> }, { label: "Design Gráfico", value: "Percepção Estética", icon: <Palette size={20} /> }, { label: "Ciência de Dados", value: "Rigor Analítico", icon: <Database size={20} /> }].map((item, i) => (
+                {[
+                  { label: t('about.philosophy_points.mechatronics'), value: t('about.philosophy_points.systemic'), icon: <Boxes size={20} /> }, 
+                  { label: t('about.philosophy_points.graphic_design'), value: t('about.philosophy_points.aesthetic'), icon: <Palette size={20} /> }, 
+                  { label: t('about.philosophy_points.data_science'), value: t('about.philosophy_points.analytic'), icon: <Database size={20} /> }
+                ].map((item, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 group-hover:border-blue-500/50 transition-colors">{item.icon}</div>
                     <div><h4 className="text-slate-200 font-bold">{item.label}</h4><p className="text-slate-500 text-sm">{item.value}</p></div>
@@ -165,7 +160,7 @@ export default function About() {
 
         <section className="py-40">
            <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold mb-4">Base de Conhecimento</h2>
+              <h2 className="text-4xl font-bold mb-4">{t('about.knowledge_base.title')}</h2>
               <div className="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
            </div>
            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -173,17 +168,20 @@ export default function About() {
                 <div className="absolute inset-0 bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <GraduationCap className="text-blue-500 mb-6" size={40} />
-                  <h3 className="text-3xl font-bold mb-2">Ciência de Dados</h3>
-                  <p className="text-slate-400 mb-6 font-mono text-sm uppercase">UNIVESP • 2023 - Presente</p>
-                  <p className="text-slate-500 leading-relaxed text-sm md:text-base">Aprofundando em algoritmos, Big Data e modelagem estatística para entregar soluções baseadas em evidências reais e inteligência preditiva.</p>
+                  <h3 className="text-3xl font-bold mb-2">{t('about.knowledge_base.univesp_title')}</h3>
+                  <p className="text-slate-400 mb-6 font-mono text-sm uppercase">{t('about.knowledge_base.univesp_date')}</p>
+                  <p className="text-slate-500 leading-relaxed text-sm md:text-base">{t('about.knowledge_base.univesp_desc')}</p>
                 </div>
               </div>
               <div className="space-y-6">
-                {[{ title: "Mecatrônica", subtitle: "SENAI", quote: "Onde a lógica ganhou forma física." }, { title: "Design Gráfico", subtitle: "Panamericana", quote: "Onde a comunicação ganhou cor e voz." }].map((edu, i) => (
+                {[
+                  { title: t('about.knowledge_base.senai_title'), subtitle: t('about.knowledge_base.senai_subtitle'), quote: t('about.knowledge_base.senai_quote') }, 
+                  { title: t('about.knowledge_base.panamericana_title'), subtitle: t('about.knowledge_base.panamericana_subtitle'), quote: t('about.knowledge_base.panamericana_quote') }
+                ].map((edu, i) => (
                   <div key={i} className="bg-slate-900/50 p-8 rounded-[2.5rem] border border-slate-800 hover:border-slate-700 transition-colors">
                     <h4 className="font-bold text-xl mb-1">{edu.title}</h4>
                     <p className="text-xs text-slate-500 uppercase mb-4 tracking-widest font-mono">{edu.subtitle}</p>
-                    <p className="text-slate-400 text-sm italic leading-relaxed">"{edu.quote}"</p>
+                    <p className="text-slate-400 text-sm italic leading-relaxed">{edu.quote}</p>
                   </div>
                 ))}
               </div>
@@ -194,17 +192,14 @@ export default function About() {
   );
 }
 
-// Sub-Componente de Card
 function SkillCard({ skill, index }) {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     mouseX.set(e.clientX - rect.left);
     mouseY.set(e.clientY - rect.top);
   };
-
   return (
     <TiltContainer>
       <motion.div
@@ -235,7 +230,6 @@ function SkillCard({ skill, index }) {
   );
 }
 
-// Tilt 3D Base
 function TiltContainer({ children }) {
   const ref = useRef(null);
   const x = useMotionValue(0);
@@ -244,16 +238,13 @@ function TiltContainer({ children }) {
   const rotateY = useTransform(x, [-0.5, 0.5], [-10, 10]);
   const springRotateX = useSpring(rotateX, { stiffness: 150, damping: 20 });
   const springRotateY = useSpring(rotateY, { stiffness: 150, damping: 20 });
-
   const handleMouseMove = (e) => {
     if (!ref.current) return;
     const rect = ref.current.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
     y.set((e.clientY - rect.top) / rect.height - 0.5);
   };
-
   const handleMouseLeave = () => { x.set(0); y.set(0); };
-
   return (
     <motion.div ref={ref} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} style={{ rotateX: springRotateX, rotateY: springRotateY, transformStyle: "preserve-3d" }} className="flex-1 h-full">
       <div style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }} className="h-full">{children}</div>

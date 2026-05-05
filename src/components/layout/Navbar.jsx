@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, User, Briefcase, Mail, Menu, X, ArrowRight } from 'lucide-react';
+import { Terminal, User, Briefcase, Mail, Menu, X, ArrowRight, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     setIsOpen(false);
@@ -19,11 +21,16 @@ export default function Navbar() {
     }
   }, [isOpen]);
 
+  const toggleLanguage = () => {
+    const nextLang = i18n.language.startsWith('pt') ? 'en' : 'pt';
+    i18n.changeLanguage(nextLang);
+  };
+
   const navLinks = [
-    { name: 'Início', path: '/', icon: <Terminal size={18} /> },
-    { name: 'Sobre', path: '/about', icon: <User size={18} /> },
-    { name: 'Projetos', path: '/projects', icon: <Briefcase size={18} /> },
-    { name: 'Contato', path: '/contact', icon: <Mail size={18} /> },
+    { name: t('navbar.home'), path: '/', icon: <Terminal size={18} /> },
+    { name: t('navbar.about'), path: '/about', icon: <User size={18} /> },
+    { name: t('navbar.projects'), path: '/projects', icon: <Briefcase size={18} /> },
+    { name: t('navbar.contact'), path: '/contact', icon: <Mail size={18} /> },
   ];
 
   return (
@@ -37,7 +44,7 @@ export default function Navbar() {
             <span className="text-blue-500">/&gt;</span>
           </Link>
 
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.path || (link.path === '/projects' && location.pathname.startsWith('/projects'));
               return (
@@ -59,6 +66,14 @@ export default function Navbar() {
                 </Link>
               );
             })}
+            
+            <button 
+              onClick={toggleLanguage}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-slate-400 hover:text-slate-50 hover:border-slate-600 transition-all font-mono text-xs uppercase"
+            >
+              <Globe size={14} />
+              {i18n.language.startsWith('pt') ? 'PT' : 'EN'}
+            </button>
           </div>
 
           <div className="md:hidden flex items-center relative z-[110]">
@@ -80,7 +95,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 h-screen bg-slate-950 z-[105] flex flex-col pt-24 px-6 md:hidden"
+            className="fixed inset-0 h-screen bg-slate-950 z-[105] flex flex-col pt-24 px-6 md:hidden overflow-y-auto"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/10 rounded-full blur-[100px] -z-10"></div>
             
@@ -113,6 +128,22 @@ export default function Navbar() {
                   </motion.div>
                 );
               })}
+
+              <motion.button
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4 }}
+                onClick={toggleLanguage}
+                className="flex items-center justify-between p-4 rounded-xl border bg-slate-900/80 border-slate-800 text-slate-400 mt-4"
+              >
+                <div className="flex items-center gap-4">
+                  <Globe size={18} className="text-slate-500" />
+                  <span className="text-lg font-bold tracking-tight">Idioma / Language</span>
+                </div>
+                <span className="font-mono text-blue-400 font-bold text-sm bg-blue-500/10 px-2 py-1 rounded">
+                  {i18n.language.startsWith('pt') ? 'PT-BR' : 'EN-US'}
+                </span>
+              </motion.button>
             </div>
           </motion.div>
         )}

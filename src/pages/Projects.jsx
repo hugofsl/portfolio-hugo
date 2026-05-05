@@ -3,8 +3,10 @@ import { motion, useMotionValue, useMotionTemplate, useSpring, useTransform } fr
 import { ArrowUpRight, Code2, Database, GitBranch, Sparkles, Terminal } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t } = useTranslation();
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -17,40 +19,40 @@ export default function Projects() {
   const allProjects = [
     {
       id: "erp-imprimil",
-      title: "ERP & Motor de Orçamentos",
-      category: "Full-Stack • React & Firebase",
+      title: t('projects_section.projects.imprimil.title'),
+      category: t('projects_section.projects.imprimil.category'),
       icon: <Code2 className="text-blue-400" size={28} />,
-      description: "Sistema de gestão focado em automação de orçamentos para grandes formatos. Resolve o desafio de cálculos complexos e travas operacionais de segurança.",
+      description: t('projects_section.projects.imprimil.description'),
       tech: ["React", "Firebase", "Tailwind", "Vexsoft API"],
       link: "/projects/sistema-comercial",
       gradient: "from-blue-500/10 to-blue-900/10"
     },
     {
       id: "asana-sync",
-      title: "Automação 'Sanfona Inteligente'",
-      category: "Data Engineering • Python",
+      title: t('projects_section.projects.asana.title'),
+      category: t('projects_section.projects.asana.category'),
       icon: <GitBranch className="text-emerald-400" size={28} />,
-      description: "Pipeline de dados que desmembra OS em micro-tarefas automáticas no Asana. Sincronização em tempo real via GitHub Actions.",
+      description: t('projects_section.projects.asana.description'),
       tech: ["Python", "Asana API", "GitHub Actions", "Pandas"],
       link: "/projects/automacao-asana",
       gradient: "from-emerald-500/10 to-emerald-900/10"
     },
     {
       id: "dashboard-dre",
-      title: "Dashboard Consolidado DRE",
-      category: "Business Intelligence • Looker",
+      title: t('projects_section.projects.dre.title'),
+      category: t('projects_section.projects.dre.category'),
       icon: <Database className="text-purple-400" size={28} />,
-      description: "Extração de dados legados (.mdb) via Python para dashboards executivos. Visão clara de margens e lucros de múltiplas filiais.",
+      description: t('projects_section.projects.dre.description'),
       tech: ["SQL", "Python", "Looker Studio", "ODBC"],
       link: "/projects/dashboard-dre",
       gradient: "from-purple-500/10 to-purple-900/10"
     },
     {
       id: "personal-cleaner",
-      title: "Webapp Personal Cleaner",
-      category: "UX/UI & CRM • Firebase",
+      title: t('projects_section.projects.cleaner.title'),
+      category: t('projects_section.projects.cleaner.category'),
       icon: <Sparkles className="text-pink-400" size={28} />,
-      description: "Plataforma high-end de serviços com funil de conversão (Wizard) B2C e CRM integrado B2B. Integração direta com Google Sheets para consolidação financeira.",
+      description: t('projects_section.projects.cleaner.description'),
       tech: ["React", "Firebase", "UX/UI", "Sheets API"],
       link: "/projects/personal-cleaner",
       gradient: "from-pink-500/10 to-pink-900/10"
@@ -63,11 +65,10 @@ export default function Projects() {
       onMouseMove={handleGlobalMouseMove}
     >
       <SEO 
-        title="Projetos" 
-        description="Uma seleção de sistemas desenvolvidos para otimizar operações, extrair inteligência de dados legados e automatizar fluxos de trabalho complexos,"
-         url="/projects"
+        title={t('navbar.projects')} 
+        description={t('projects_gallery.subtitle')}
+        url="/projects"
       />
-      {/* Holofote Global de Fundo */}
       <motion.div
         className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition duration-500 z-10"
         style={{
@@ -86,20 +87,19 @@ export default function Projects() {
           <motion.div 
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="flex items-center gap-2 text-blue-400 font-mono text-sm mb-4"
+            className="flex items-center gap-2 text-blue-400 font-mono text-sm mb-4 uppercase"
           >
-            <Terminal size={16} /> PORTFÓLIO_DE_ENGENHARIA
+            <Terminal size={16} /> {t('projects_gallery.terminal_tag')}
           </motion.div>
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-6xl md:text-8xl font-black tracking-tighter mb-6"
           >
-            Soluções que <br /> <span className="text-transparent" style={{ WebkitTextStroke: '1.5px #475569' }}>Escalam.</span>
+            {t('projects_gallery.title')} <br /> <span className="text-transparent" style={{ WebkitTextStroke: '1.5px #475569' }}>{t('projects_gallery.title_highlight')}</span>
           </motion.h1>
           <p className="text-xl text-slate-400 leading-relaxed">
-            Uma seleção de sistemas desenvolvidos para otimizar operações, 
-            extrair inteligência de dados legados e automatizar fluxos de trabalho complexos.
+            {t('projects_gallery.subtitle')}
           </p>
         </header>
 

@@ -5,11 +5,12 @@ import ProjectsSection from '../components/ProjectsSection';
 import TimelineSection from '../components/TimelineSection';
 import CtaSection from '../components/CtaSection';
 import SEO from '../components/SEO';
+import { useTranslation } from 'react-i18next';
 
 export default function Home() {
   const constraintsRef = useRef(null);
+  const { t } = useTranslation();
 
-  // Rastreio de Mouse Global para o fundo
   const heroMouseX = useMotionValue(0);
   const heroMouseY = useMotionValue(0);
 
@@ -19,7 +20,6 @@ export default function Home() {
     heroMouseY.set(clientY - top);
   };
 
-  // Rastreio de Mouse Local EXCLUSIVO para o texto "CODAR."
   const textMouseX = useMotionValue(0);
   const textMouseY = useMotionValue(0);
 
@@ -30,18 +30,18 @@ export default function Home() {
   };
 
   const skills = [
-    { text: "React & Vite", icon: <Code2 size={16} />, color: "bg-blue-500/20 text-blue-400 border-blue-500/30", x: -150, y: -100 },
-    { text: "Data Science", icon: <Database size={16} />, color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30", x: 150, y: -50 },
-    { text: "UI/UX & Design", icon: <Palette size={16} />, color: "bg-pink-500/20 text-pink-400 border-pink-500/30", x: -100, y: 100 },
-    { text: "Automação", icon: <Bot size={16} />, color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30", x: 200, y: 80 },
-    { text: "Firebase", icon: <Zap size={16} />, color: "bg-orange-500/20 text-orange-400 border-orange-500/30", x: 0, y: -150 },
+    { text: t('home.skills.react'), icon: <Code2 size={16} />, color: "bg-blue-500/20 text-blue-400 border-blue-500/30", x: -150, y: -100 },
+    { text: t('home.skills.data'), icon: <Database size={16} />, color: "bg-emerald-500/20 text-emerald-400 border-emerald-500/30", x: 150, y: -50 },
+    { text: t('home.skills.ui'), icon: <Palette size={16} />, color: "bg-pink-500/20 text-pink-400 border-pink-500/30", x: -100, y: 100 },
+    { text: t('home.skills.automation'), icon: <Bot size={16} />, color: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30", x: 200, y: 80 },
+    { text: t('home.skills.firebase'), icon: <Zap size={16} />, color: "bg-orange-500/20 text-orange-400 border-orange-500/30", x: 0, y: -150 },
   ];
 
   return (
     <div className="bg-slate-950 font-sans">
       <SEO 
-        title="Início" 
-        description="Do pixel ao banco de dados. Construo aplicações de alta performance e automações inteligentes."
+        title={t('navbar.home')} 
+        description={t('seo.default_desc')}
         url="/"
       />
       <div 
@@ -66,9 +66,7 @@ export default function Home() {
 
         <motion.div ref={constraintsRef} className="absolute inset-0 z-20 pointer-events-none" />
 
-        {/* Z-INDEX 30: O TEXTO FICA ATRÁS DOS ITENS, MAS AINDA RECEBE O MOUSE */}
         <div className="relative z-30 text-center px-4 w-full max-w-5xl pointer-events-none">
-          
           <TiltContainer>
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -79,7 +77,7 @@ export default function Home() {
               <h1 className="text-7xl md:text-[9rem] font-black tracking-tighter leading-none uppercase mb-6 flex flex-col items-center">
                 
                 <span className="text-transparent" style={{ WebkitTextStroke: '2px #334155' }}>
-                  HUGO
+                  {t('home.title_first')}
                 </span>
 
                 <span 
@@ -87,7 +85,7 @@ export default function Home() {
                   onMouseMove={handleTextMouseMove}
                 >
                   <span className="block text-transparent leading-tight" style={{ WebkitTextStroke: '2px #475569' }}>
-                    LOURENÇO
+                    {t('home.title_last')}
                   </span>
                   
                   <motion.span
@@ -96,7 +94,7 @@ export default function Home() {
                       clipPath: useMotionTemplate`circle(120px at ${textMouseX}px ${textMouseY}px)`
                     }}
                   >
-                    LOURENÇO
+                    {t('home.title_last')}
                   </motion.span>
                 </span>
                 
@@ -108,14 +106,12 @@ export default function Home() {
                 transition={{ delay: 0.3 }}
                 className="text-xl md:text-2xl text-slate-400 max-w-2xl mx-auto font-light"
               >
-                Olá! Da paleta de cores ao banco de dados, construo aplicações de alta performance e automações inteligentes.
+                {t('home.subtitle')}
               </motion.p>
             </motion.div>
           </TiltContainer>
-
         </div>
 
-        {/* Z-INDEX 40: ITENS FLUTUANTES NA FRENTE. O container não bloqueia o mouse (pointer-events-none), mas os itens bloqueiam (pointer-events-auto) */}
         <div className="absolute inset-0 z-40 flex items-center justify-center pointer-events-none">
           {skills.map((skill, index) => (
             <motion.div 
@@ -141,7 +137,7 @@ export default function Home() {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 z-10 flex flex-col items-center gap-2 text-slate-500 pointer-events-none"
         >
-          <span className="text-xs uppercase font-mono tracking-widest">Arraste os itens</span>
+          <span className="text-xs uppercase font-mono tracking-widest">{t('home.scroll_down')}</span>
           <motion.div animate={{ y: [0, 10, 0] }} transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}>
             <ArrowDown size={20} />
           </motion.div>
@@ -157,7 +153,6 @@ export default function Home() {
       <div className="bg-slate-950 border-t border-slate-900 relative z-50">
         <CtaSection />
       </div>
-
     </div>
   );
 }
@@ -182,10 +177,7 @@ function TiltContainer({ children }) {
     y.set((mouseY / rect.height) - 0.5);
   };
 
-  const handleMouseLeave = () => {
-    x.set(0);
-    y.set(0);
-  };
+  const handleMouseLeave = () => { x.set(0); y.set(0); };
 
   return (
     <motion.div

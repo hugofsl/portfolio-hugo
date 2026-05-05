@@ -1,0 +1,259 @@
+{
+    "seo": {
+      "default_title": "Hugo Lourenço | Arquiteto de Fluxos Digitais",
+      "default_desc": "Estrategista e Desenvolvedor. Transformo dados em inteligência e design em experiências memoráveis utilizando React, Firebase e Python."
+    },
+    "navbar": {
+      "home": "Início",
+      "about": "Sobre",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+    "footer": {
+      "os_status": "Sistemas Operacionais",
+      "copyright": "© Hugo Lourenço 2026 | Desenvolvido com React & Vite"
+    },
+    "home": {
+      "title_first": "HUGO",
+      "title_last": "LOURENÇO",
+      "subtitle": "Olá! Da paleta de cores ao banco de dados, construo aplicações de alta performance e automações inteligentes.",
+      "scroll_down": "Conheça melhor",
+      "skills": {
+        "react": "React & Vite",
+        "data": "Data Science",
+        "ui": "UI/UX & Design",
+        "automation": "Automação",
+        "firebase": "Firebase"
+      }
+    },
+    "about": {
+      "protocol": "PROTOCOLO DE IDENTIDADE ATIVO",
+      "title_architect": "Arquiteto de",
+      "title_workflows": "Fluxos Digitais.",
+      "subtitle": "Estrategista criativo com raízes na engenharia. Transformo dados em inteligência e design em experiências memoráveis.",
+      "philosophy": {
+        "precision": "A precisão da",
+        "logic": "lógica",
+        "breath": "com o fôlego da",
+        "art": "arte.",
+        "description": "Minha formação multidisciplinar permite que eu transite entre o desenvolvimento de baixo nível e a alta gestão de design com facilidade. Não apenas escrevo código; eu projeto sistemas resilientes."
+      },
+      "philosophy_points": {
+        "mechatronics": "Mecatrônica",
+        "systemic": "Raciocínio Sistêmico",
+        "graphic_design": "Design Gráfico",
+        "aesthetic": "Percepção Estética",
+        "data_science": "Ciência de Dados",
+        "analytic": "Rigor Analítico"
+      },
+      "knowledge_base": {
+        "title": "Base de Conhecimento",
+        "univesp_title": "Ciência de Dados",
+        "univesp_date": "UNIVESP • 2023 - Presente",
+        "univesp_desc": "Aprofundando em algoritmos, Big Data e modelagem estatística para entregar soluções baseadas em evidências reais e inteligência preditiva.",
+        "senai_title": "Mecatrônica",
+        "senai_subtitle": "SENAI",
+        "senai_quote": "\"Onde a lógica ganhou forma física.\"",
+        "panamericana_title": "Design Gráfico",
+        "panamericana_subtitle": "Panamericana",
+        "panamericana_quote": "\"Onde a comunicação ganhou cor e voz.\""
+      },
+      "skills_cards": {
+        "eng": "Engenharia & Dev",
+        "design": "Design & UX",
+        "strategy": "Estratégia & Dados",
+        "items": {
+          "art_direction": "Direção de Arte",
+          "data_science": "Ciência de Dados",
+          "agile": "Gestão Ágil (SCRUM)",
+          "planning": "Planejamento"
+        }
+      }
+    },
+    "projects_gallery": {
+      "terminal_tag": "PORTFÓLIO_DE_ENGENHARIA",
+      "title": "Soluções que",
+      "title_highlight": "Escalam.",
+      "subtitle": "Uma seleção de sistemas desenvolvidos para otimizar operações, extrair inteligência de dados legados e automatizar fluxos de trabalho complexos."
+    },
+    "projects_section": {
+      "title": "Projetos",
+      "title_highlight": "Em Destaque.",
+      "subtitle": "Casos reais de engenharia de software e análise de dados, focados em resolver gargalos operacionais e otimizar fluxos de trabalho.",
+      "button": "Estudo de Caso",
+      "projects": {
+        "imprimil": {
+          "title": "ERP & Motor de Orçamentos",
+          "category": "Full-Stack • React & Firebase",
+          "description": "Sistema de gestão focado em automação de orçamentos para grandes formatos. Resolve o desafio de cálculos complexos e travas operacionais de segurança."
+        },
+        "asana": {
+          "title": "Automação 'Sanfona Inteligente'",
+          "category": "Data Engineering • Python",
+          "description": "Pipeline de dados que desmembra OS em micro-tarefas automáticas no Asana. Sincronização em tempo real via GitHub Actions."
+        },
+        "dre": {
+          "title": "Dashboard Consolidado DRE",
+          "category": "Business Intelligence • Looker",
+          "description": "Extração de dados legados (.mdb) via Python para dashboards executivos. Visão clara de margens e lucros de múltiplas filiais."
+        },
+        "cleaner": {
+          "title": "Webapp Personal Cleaner",
+          "category": "UX/UI & CRM • Firebase",
+          "description": "Plataforma high-end de serviços com funil de conversão (Wizard) B2C e CRM integrado B2B. Arquitetura serverless utilizando Firebase para otimização extrema de custos."
+        }
+      }
+    },
+    "timeline": {
+      "title": "A Evolução",
+      "title_highlight": "Profissional.",
+      "subtitle": "Da automação industrial ao design gráfico, culminando no desenvolvimento de software.",
+      "steps": {
+        "1": {
+          "year": "2023 - Presente",
+          "title": "Dados & Engenharia",
+          "subtitle": "UNIVESP • Imprimil",
+          "description": "Construindo sistemas complexos, APIs e automações. Cursando Bacharelado em Ciência de Dados para aprofundar o rigor analítico nos projetos de BI."
+        },
+        "2": {
+          "year": "2014 - 2025",
+          "title": "Design & Gestão Ágil",
+          "subtitle": "Agência Conn • Made in Rua",
+          "description": "Mais de uma década atuando no mercado publicitário. Liderança de times usando SCRUM, direção de arte, campanhas focadas em conversão e rebranding visual."
+        },
+        "3": {
+          "year": "O Ponto Fora da Curva",
+          "title": "Game Dev Independente",
+          "subtitle": "Projeto Pessoal - Unity & C#",
+          "description": "A curiosidade pela programação me levou a desenhar, programar e publicar um jogo mobile 100% sozinho, unindo lógica e arte visual."
+        },
+        "4": {
+          "year": "2009 - 2011",
+          "title": "A Base Lógica",
+          "subtitle": "SENAI Sorocaba - Mecatrônica",
+          "description": "Onde o pensamento sistêmico começou. O estudo de automação industrial e eletrônica moldou a forma estruturada como resolvo problemas complexos hoje."
+        }
+      }
+    },
+    "cta": {
+      "description": "Pressione para estabelecer uma conexão segura e iniciar um novo projeto.",
+      "btn_initiate": "Iniciar Contato",
+      "log_1": "> Resolvendo dependências...",
+      "log_2": "> Estabelecendo handshake seguro...",
+      "log_3": "> Descriptografando chaves...",
+      "success": "Acesso Concedido.",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "contact": {
+      "title": "Vamos",
+      "title_highlight": "Conversar?",
+      "subtitle": "Inicie o protocolo de contato para novos projetos.",
+      "success_title": "Mensagem Enviada!",
+      "success_desc": "O script foi executado com sucesso. Retornarei em breve no seu e-mail.",
+      "btn_home": "Voltar ao Início",
+      "step1_title": "Quem é você?",
+      "input_name": "Seu nome",
+      "input_email": "Seu melhor e-mail",
+      "btn_next": "Próximo Passo",
+      "step2_title": "Qual a necessidade?",
+      "type_web": "Desenvolvimento Web",
+      "type_data": "Ciência de Dados / BI",
+      "type_strategy": "Estratégia & Marketing",
+      "type_other": "Outra Necessidade",
+      "btn_back": "VOLTAR",
+      "step3_title": "Detalhes do projeto",
+      "input_message": "Conte-me um pouco mais sobre o que você precisa...",
+      "btn_sending": "ENVIANDO PROTOCOLO...",
+      "btn_submit": "ESTABELECER CONEXÃO",
+      "btn_review": "REVISAR ESCOLHAS"
+    },
+    "case_common": {
+      "back_terminal": "VOLTAR PARA O TERMINAL",
+      "back_projects": "VOLTAR PARA PROJETOS"
+    },
+    "case_imprimil": {
+      "title": "Sistema Comercial",
+      "title_highlight": "Integrado.",
+      "subtitle": "Uma aplicação complexa de gestão de produção projetada para lidar com regras de negócios específicas (como taxas mínimas e perdas de material), com acesso multi-nível protegido por Firebase.",
+      "challenge_title": "O Desafio",
+      "challenge_desc": "O processo de orçamentação para frotas e materiais gráficos envolvia cálculos manuais demorados. Além disso, orçamentos muito pequenos geravam prejuízo devido aos custos fixos de setup das máquinas e deslocamento técnico. A solução precisava ser rápida, em nuvem e à prova de erros.",
+      "arch_title": "A Arquitetura",
+      "arch_desc": "Desenvolvi um SPA em React protegido pelo AuthProvider do Firebase. Apenas gestores podem aprovar layouts ou alterar os custos base de materiais no Firestore. A aplicação processa orçamentos complexos e comunica via REST API com sistemas de emissão de boletos.",
+      "sandbox_title": "Sandbox Interativo",
+      "sandbox_subtitle": "Simule o motor de regras de negócio:",
+      "width": "Largura (m)",
+      "height": "Altura (m)",
+      "material": "Material (Adesivo)",
+      "mat_option1": "3M MCS Certificado (R$ 150/m²)",
+      "mat_option2": "Vinil Promocional (R$ 80/m²)",
+      "area_total": "Área Total:",
+      "mat_cost": "Custo Material:",
+      "sys_floor": "Trava do Sistema (Piso):",
+      "total_quote": "Total Orçado:",
+      "rule_applied": "Regra aplicada: O subtotal foi inferior ao piso operacional. O sistema bloqueou o prejuízo e ajustou para a taxa mínima de R$ 350,00."
+    },
+    "case_asana": {
+      "title": "Automação",
+      "title_highlight": "'Sanfona'.",
+      "subtitle": "Um pipeline de engenharia de dados invisível que conecta o planejamento no Google Sheets à execução operacional no Asana, automatizando fluxos de produção física em tempo real.",
+      "challenge_title": "O Gargalo",
+      "challenge_desc": "O setor de planejamento gerava Ordens de Serviço (OS) massivas no Google Sheets. No entanto, para a fábrica funcionar, cada OS precisava ser desmembrada manualmente no Asana em tarefas diárias (Impressão, Montagem, Aplicação), alocando equipes específicas. Isso gerava atrasos, duplicidades e perda da formatação HTML original.",
+      "arch_title": "O Motor de Sincronização",
+      "arch_desc": "Criei um script Python agendado via GitHub Actions. Ele varre as planilhas, consome a API REST do Asana e cria o efeito \"Sanfona\": uma linha de planilha vira múltiplas micro-tarefas encadeadas na nuvem, com labels mapeadas dinamicamente (como 'on_track' ou 'on_hold') e evitando duplicatas no banco.",
+      "sandbox_title": "Script Sandbox",
+      "btn_processing": "Processando...",
+      "btn_run_again": "Rodar Novamente",
+      "btn_run": "Executar Automação",
+      "waiting_log": "Aguardando execução do script python...",
+      "board_title": "Fila de Produção (Asana)",
+      "board_empty": "Board vazio. Rode a automação para importar dados da planilha."
+    },
+    "case_dre": {
+      "title": "Dashboard DRE",
+      "title_highlight": "Consolidado.",
+      "subtitle": "Engenharia de dados aplicada à inteligência financeira. Um pipeline completo de extração de bancos de dados legados para a nuvem, alimentando painéis executivos dinâmicos.",
+      "challenge_title": "O Legado Sombrio",
+      "challenge_desc": "O principal desafio do projeto foi a extração de dados do sistema ERP antigo da empresa (Gestind), que armazenava todas as informações financeiras em um banco de dados local da Microsoft Access (.mdb). Os diretores precisavam consolidar resultados de múltiplas filiais, mas o processo exigia exportações manuais intermináveis.",
+      "arch_title": "A Ponte para a Nuvem",
+      "arch_desc": "Desenvolvi um pipeline em Python utilizando a biblioteca pyodbc para aceder aos ficheiros .mdb legados via rede local. O script processa e limpa os dados com pandas, injetando-os automaticamente em planilhas/bancos em nuvem, que finalmente alimentam as visões do DRE (Demonstração do Resultado do Exercício) no Looker Studio.",
+      "sandbox_title": "Visão Executiva (Live)",
+      "gross_revenue": "Receita Bruta",
+      "net_profit": "Lucro Líquido",
+      "margin_evolution": "Evolução de Margem",
+      "branches": {
+        "consolidado": "Consolidado Global",
+        "filial1": "Filial Matriz (Tatuí)",
+        "filial2": "Filial Sul"
+      }
+    },
+    "case_cleaner": {
+      "title": "Webapp",
+      "title_highlight": "Personal Cleaner.",
+      "subtitle": "Uma plataforma high-end de serviços de limpeza que une uma experiência de conversão B2C (Wizard) a um CRM leve de gestão de leads B2B, operando com custo de infraestrutura virtualmente zero.",
+      "challenge_title": "A Experiência Premium",
+      "challenge_desc": "Serviços de limpeza de alto padrão exigem uma identidade visual clean e minimalista. O desafio era substituir o atrito de formulários longos ou contatos diretos e frios no WhatsApp por um funil de orçamentação elegante, onde o cliente se sente construindo um serviço personalizado.",
+      "arch_title": "Arquitetura Zero-Cost & CRM",
+      "arch_desc": "O sistema foi desenhado para maximizar lucros eliminando custos fixos de servidor. Utilizando as cotas gratuitas do Firebase, a Landing Page atua também como um CRM enxuto. Leads são capturados, qualificados pelo administrador e, ao serem marcados como \"Convertidos\", sincronizam automaticamente com uma planilha financeira no Google Sheets.",
+      "sandbox_title": "Wizard do Cliente",
+      "property_size": "Tamanho do Imóvel",
+      "rooms": "Quartos",
+      "bathrooms": "Banheiros",
+      "btn_next": "Avançar",
+      "service_type": "Tipo de Serviço",
+      "type_standard": "Padrão",
+      "type_heavy": "Pesada",
+      "type_post": "Pós-Obra",
+      "btn_back": "Voltar",
+      "btn_generating": "Gerando...",
+      "btn_quote": "Pedir Orçamento",
+      "quote_sent": "Orçamento Enviado!",
+      "quote_desc": "Veja o lead no painel ao lado.",
+      "crm_title": "CRM Interno",
+      "btn_sync": "Fechar & Sincronizar",
+      "waiting_sync": "Aguardando conversões para sincronizar...",
+      "lead_visitor": "Visitante (Você)",
+      "status_new": "novo",
+      "status_converted": "convertido"
+    }
+  }

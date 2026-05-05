@@ -1,0 +1,259 @@
+{
+    "seo": {
+      "default_title": "Hugo Lourenço | Digital Workflow Architect",
+      "default_desc": "Strategist and Developer. I transform data into intelligence and design into memorable experiences using React, Firebase, and Python."
+    },
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "footer": {
+      "os_status": "Operating Systems",
+      "copyright": "© Hugo Lourenço 2026 | Developed with React & Vite"
+    },
+    "home": {
+      "title_first": "HUGO",
+      "title_last": "LOURENÇO",
+      "subtitle": "Hello! From color palettes to databases, I build high-performance applications and smart automations.",
+      "scroll_down": "Scroll to explore",
+      "skills": {
+        "react": "React & Vite",
+        "data": "Data Science",
+        "ui": "UI/UX & Design",
+        "automation": "Automation",
+        "firebase": "Firebase"
+      }
+    },
+    "about": {
+      "protocol": "IDENTITY PROTOCOL ACTIVE",
+      "title_architect": "Architect of",
+      "title_workflows": "Digital Workflows.",
+      "subtitle": "Creative strategist with engineering roots. I transform data into intelligence and design into memorable experiences.",
+      "philosophy": {
+        "precision": "The precision of",
+        "logic": "logic",
+        "breath": "combined with the soul of",
+        "art": "art.",
+        "description": "My multidisciplinary background allows me to transition easily between low-level development and high-level design management. I don't just write code; I design resilient systems."
+      },
+      "philosophy_points": {
+        "mechatronics": "Mechatronics",
+        "systemic": "Systemic Thinking",
+        "graphic_design": "Graphic Design",
+        "aesthetic": "Aesthetic Perception",
+        "data_science": "Data Science",
+        "analytic": "Analytical Rigor"
+      },
+      "knowledge_base": {
+        "title": "Knowledge Base",
+        "univesp_title": "Data Science",
+        "univesp_date": "UNIVESP • 2023 - Present",
+        "univesp_desc": "Delving into algorithms, Big Data, and statistical modeling to deliver solutions based on real evidence and predictive intelligence.",
+        "senai_title": "Mechatronics",
+        "senai_subtitle": "SENAI",
+        "senai_quote": "\"Where logic took physical form.\"",
+        "panamericana_title": "Graphic Design",
+        "panamericana_subtitle": "Panamericana",
+        "panamericana_quote": "\"Where communication gained color and voice.\""
+      },
+      "skills_cards": {
+        "eng": "Engineering & Dev",
+        "design": "Design & UX",
+        "strategy": "Strategy & Data",
+        "items": {
+          "art_direction": "Art Direction",
+          "data_science": "Data Science",
+          "agile": "Agile Management (SCRUM)",
+          "planning": "Planning"
+        }
+      }
+    },
+    "projects_gallery": {
+      "terminal_tag": "ENGINEERING_PORTFOLIO",
+      "title": "Solutions that",
+      "title_highlight": "Scale.",
+      "subtitle": "A curated selection of systems developed to optimize operations, extract intelligence from legacy data, and automate complex workflows."
+    },
+    "projects_section": {
+      "title": "Featured",
+      "title_highlight": "Projects.",
+      "subtitle": "Real-world cases of software engineering and data analysis, focused on solving operational bottlenecks and optimizing workflows.",
+      "button": "View Case Study",
+      "projects": {
+        "imprimil": {
+          "title": "ERP & Quoting Engine",
+          "category": "Full-Stack • React & Firebase",
+          "description": "Management system focused on automating quotes for large formats. Solves the challenge of complex calculations and operational security locks."
+        },
+        "asana": {
+          "title": "'Smart Accordion' Automation",
+          "category": "Data Engineering • Python",
+          "description": "Data pipeline that breaks down Service Orders into automatic micro-tasks in Asana. Real-time synchronization via GitHub Actions."
+        },
+        "dre": {
+          "title": "Consolidated P&L Dashboard",
+          "category": "Business Intelligence • Looker",
+          "description": "Extraction of legacy data (.mdb) via Python for executive dashboards. Clear view of margins and profits across multiple branches."
+        },
+        "cleaner": {
+          "title": "Personal Cleaner Webapp",
+          "category": "UX/UI & CRM • Firebase",
+          "description": "High-end service platform with a B2C conversion funnel (Wizard) and integrated B2B CRM. Serverless architecture using Firebase for extreme cost optimization."
+        }
+      }
+    },
+    "timeline": {
+      "title": "Professional",
+      "title_highlight": "Evolution.",
+      "subtitle": "From industrial automation to graphic design, culminating in software development.",
+      "steps": {
+        "1": {
+          "year": "2023 - Present",
+          "title": "Data & Engineering",
+          "subtitle": "UNIVESP • Imprimil",
+          "description": "Building complex systems, APIs, and automations. Pursuing a Bachelor's in Data Science to deepen analytical rigor in BI projects."
+        },
+        "2": {
+          "year": "2014 - 2025",
+          "title": "Design & Agile Management",
+          "subtitle": "Conn Agency • Made in Rua",
+          "description": "Over a decade working in the advertising market. Leading teams using SCRUM, art direction, conversion-focused campaigns, and visual rebranding."
+        },
+        "3": {
+          "year": "The Outlier",
+          "title": "Indie Game Dev",
+          "subtitle": "Personal Project - Unity & C#",
+          "description": "Curiosity for programming led me to design, code, and publish a mobile game 100% on my own, merging logic and visual art."
+        },
+        "4": {
+          "year": "2009 - 2011",
+          "title": "The Logical Foundation",
+          "subtitle": "SENAI Sorocaba - Mechatronics",
+          "description": "Where systemic thinking began. Studying industrial automation and electronics shaped the structured way I solve complex problems today."
+        }
+      }
+    },
+    "cta": {
+      "description": "Press to establish a secure connection and start a new project.",
+      "btn_initiate": "Initiate Contact",
+      "log_1": "> Resolving dependencies...",
+      "log_2": "> Establishing secure handshake...",
+      "log_3": "> Decrypting keys...",
+      "success": "Access Granted.",
+      "email": "E-mail",
+      "whatsapp": "WhatsApp"
+    },
+    "contact": {
+      "title": "Let's",
+      "title_highlight": "Talk?",
+      "subtitle": "Initiate the contact protocol for new projects.",
+      "success_title": "Message Sent!",
+      "success_desc": "The script was executed successfully. I will get back to your email shortly.",
+      "btn_home": "Back to Home",
+      "step1_title": "Who are you?",
+      "input_name": "Your name",
+      "input_email": "Your best e-mail",
+      "btn_next": "Next Step",
+      "step2_title": "What do you need?",
+      "type_web": "Web Development",
+      "type_data": "Data Science / BI",
+      "type_strategy": "Strategy & Marketing",
+      "type_other": "Other Need",
+      "btn_back": "GO BACK",
+      "step3_title": "Project Details",
+      "input_message": "Tell me a little more about what you need...",
+      "btn_sending": "SENDING PROTOCOL...",
+      "btn_submit": "ESTABLISH CONNECTION",
+      "btn_review": "REVIEW CHOICES"
+    },
+    "case_common": {
+      "back_terminal": "BACK TO TERMINAL",
+      "back_projects": "BACK TO PROJECTS"
+    },
+    "case_imprimil": {
+      "title": "Integrated",
+      "title_highlight": "Commercial System.",
+      "subtitle": "A complex production management application designed to handle specific business rules (such as minimum fees and material waste), with multi-level access protected by Firebase.",
+      "challenge_title": "The Challenge",
+      "challenge_desc": "The quoting process for fleets and graphic materials involved time-consuming manual calculations. Additionally, very small quotes generated losses due to fixed machine setup and technical displacement costs. The solution needed to be fast, cloud-based, and error-proof.",
+      "arch_title": "The Architecture",
+      "arch_desc": "I developed a React SPA protected by Firebase AuthProvider. Only managers can approve layouts or change base material costs in Firestore. The application processes complex quotes and communicates via REST API with billing systems.",
+      "sandbox_title": "Interactive Sandbox",
+      "sandbox_subtitle": "Simulate the business rule engine:",
+      "width": "Width (m)",
+      "height": "Height (m)",
+      "material": "Material (Vinyl)",
+      "mat_option1": "3M MCS Certified ($ 150/sqm)",
+      "mat_option2": "Promotional Vinyl ($ 80/sqm)",
+      "area_total": "Total Area:",
+      "mat_cost": "Material Cost:",
+      "sys_floor": "System Lock (Floor):",
+      "total_quote": "Total Quote:",
+      "rule_applied": "Rule applied: The subtotal was below the operational floor. The system blocked the loss and adjusted it to the minimum fee of $ 350.00."
+    },
+    "case_asana": {
+      "title": "'Smart Accordion'",
+      "title_highlight": "Automation.",
+      "subtitle": "An invisible data engineering pipeline that connects planning in Google Sheets to operational execution in Asana, automating physical production workflows in real-time.",
+      "challenge_title": "The Bottleneck",
+      "challenge_desc": "The planning sector generated massive Service Orders (SO) in Google Sheets. However, for the factory to run, each SO had to be manually broken down in Asana into daily tasks (Printing, Assembly, Application), allocating specific teams. This caused delays, duplicates, and loss of original HTML formatting.",
+      "arch_title": "The Sync Engine",
+      "arch_desc": "I created a Python script scheduled via GitHub Actions. It scans the spreadsheets, consumes the Asana REST API, and creates the \"Accordion\" effect: one spreadsheet row turns into multiple chained micro-tasks in the cloud, with dynamically mapped labels (like 'on_track' or 'on_hold') and preventing database duplicates.",
+      "sandbox_title": "Script Sandbox",
+      "btn_processing": "Processing...",
+      "btn_run_again": "Run Again",
+      "btn_run": "Execute Automation",
+      "waiting_log": "Waiting for python script execution...",
+      "board_title": "Production Queue (Asana)",
+      "board_empty": "Empty board. Run the automation to import spreadsheet data."
+    },
+    "case_dre": {
+      "title": "Consolidated",
+      "title_highlight": "P&L Dashboard.",
+      "subtitle": "Data engineering applied to financial intelligence. A complete pipeline extracting legacy databases to the cloud, feeding dynamic executive panels.",
+      "challenge_title": "The Dark Legacy",
+      "challenge_desc": "The project's main challenge was extracting data from the company's old ERP system (Gestind), which stored all financial information in a local Microsoft Access database (.mdb). Directors needed to consolidate results from multiple branches, but the process required endless manual exports.",
+      "arch_title": "The Bridge to the Cloud",
+      "arch_desc": "I developed a Python pipeline using the pyodbc library to access legacy .mdb files over the local network. The script processes and cleans data with pandas, automatically injecting them into cloud spreadsheets/databases, which finally feed the P&L (Profit and Loss) views in Looker Studio.",
+      "sandbox_title": "Executive View (Live)",
+      "gross_revenue": "Gross Revenue",
+      "net_profit": "Net Profit",
+      "margin_evolution": "Margin Evolution",
+      "branches": {
+        "consolidado": "Global Consolidated",
+        "filial1": "HQ Branch",
+        "filial2": "South Branch"
+      }
+    },
+    "case_cleaner": {
+      "title": "Personal Cleaner",
+      "title_highlight": "Webapp.",
+      "subtitle": "A high-end cleaning services platform that combines a B2C conversion experience (Wizard) with a lightweight B2B lead management CRM, operating with virtually zero infrastructure cost.",
+      "challenge_title": "The Premium Experience",
+      "challenge_desc": "High-standard cleaning services demand a clean and minimalist visual identity. The challenge was to replace the friction of long forms or cold direct contacts on WhatsApp with an elegant quoting funnel, where the client feels they are building a personalized service.",
+      "arch_title": "Zero-Cost Architecture & CRM",
+      "arch_desc": "The system was designed to maximize profits by eliminating fixed server costs. Using Firebase's free quotas, the Landing Page also acts as a lean CRM. Leads are captured, qualified by the admin, and when marked as \"Converted\", automatically sync with a financial spreadsheet in Google Sheets.",
+      "sandbox_title": "Client Wizard",
+      "property_size": "Property Size",
+      "rooms": "Bedrooms",
+      "bathrooms": "Bathrooms",
+      "btn_next": "Next",
+      "service_type": "Service Type",
+      "type_standard": "Standard",
+      "type_heavy": "Deep Clean",
+      "type_post": "Post-Construction",
+      "btn_back": "Back",
+      "btn_generating": "Generating...",
+      "btn_quote": "Request Quote",
+      "quote_sent": "Quote Sent!",
+      "quote_desc": "Check the lead in the panel next to it.",
+      "crm_title": "Internal CRM",
+      "btn_sync": "Close & Sync",
+      "waiting_sync": "Waiting for conversions to sync...",
+      "lead_visitor": "Visitor (You)",
+      "status_new": "new",
+      "status_converted": "converted"
+    }
+  }

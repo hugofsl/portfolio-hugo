@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Terminal, Mail, MessageSquare, ArrowRight, CheckCircle2, Copy } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function CtaSection() {
+  const { t } = useTranslation();
   const [status, setStatus] = useState('idle');
   const [copied, setCopied] = useState(false);
 
@@ -37,33 +39,33 @@ export default function CtaSection() {
             </div>
             {status === 'idle' && (
               <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                <p className="text-slate-400 mb-6">Pressione para estabelecer uma conexão segura e iniciar um novo projeto.</p>
+                <p className="text-slate-400 mb-6">{t('cta.description')}</p>
                 <button onClick={handleExecute} className="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-sans font-bold rounded-lg transition-colors flex items-center gap-2">
-                  Iniciar Contato <ArrowRight size={18} />
+                  {t('cta.btn_initiate')} <ArrowRight size={18} />
                 </button>
               </motion.div>
             )}
             {status === 'loading' && (
               <div className="space-y-2 text-slate-400">
-                <p>&gt; Resolvendo dependências...</p>
-                <p>&gt; Estabelecendo handshake seguro...</p>
-                <p className="text-blue-400">&gt; Descriptografando chaves...</p>
+                <p>{t('cta.log_1')}</p>
+                <p>{t('cta.log_2')}</p>
+                <p className="text-blue-400">{t('cta.log_3')}</p>
                 <motion.div animate={{ opacity: [1, 0.5, 1] }} transition={{ repeat: Infinity, duration: 0.8 }} className="w-2 h-5 bg-slate-400 mt-2" />
               </div>
             )}
             <AnimatePresence>
               {status === 'ready' && (
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} className="pt-4 border-t border-slate-800 mt-4">
-                  <p className="text-emerald-400 mb-6 flex items-center gap-2"><CheckCircle2 size={18} /> Acesso Concedido.</p>
+                  <p className="text-emerald-400 mb-6 flex items-center gap-2"><CheckCircle2 size={18} /> {t('cta.success')}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
                     <div className="flex bg-slate-950 border border-slate-800 rounded-lg p-1">
                       <a href="mailto:hugofsl@gmail.com" className="flex-1 flex items-center justify-center gap-2 px-4 py-3 hover:bg-slate-900 rounded-md transition-colors text-slate-300">
-                        <Mail size={18} /> E-mail
+                        <Mail size={18} /> {t('cta.email')}
                       </a>
                       <button onClick={copyEmail} className="px-4 border-l border-slate-800 text-slate-400">{copied ? <CheckCircle2 size={18} className="text-emerald-400" /> : <Copy size={18} />}</button>
                     </div>
                     <a href="https://wa.me/5515988177800" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 px-4 py-3 bg-[#25D366]/10 border border-[#25D366]/20 text-[#25D366] rounded-lg font-medium">
-                      <MessageSquare size={18} /> WhatsApp
+                      <MessageSquare size={18} /> {t('cta.whatsapp')}
                     </a>
                   </div>
                 </motion.div>
